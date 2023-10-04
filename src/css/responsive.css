@@ -1,0 +1,84 @@
+@media (max-width: 1000px) {
+
+    #about,
+    #languages,
+    #completed-projects,
+    #projects-in-progress {
+        border-top-left-radius: var(--borderRadius);
+        border-top-right-radius: var(--borderRadius);
+        border-bottom-left-radius: var(--borderRadius);
+        border-bottom-right-radius: var(--borderRadius);
+    }
+
+    #profile-pic {
+        width: 80%;
+        max-width: 200px;
+        aspect-ratio: 1/1;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        border: .5vw solid white;
+        border-radius: 50%;
+    }
+}
+
+@media (max-width: 847px) {
+    header {
+        height: auto;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        margin: 5px 0;
+    }
+
+    header nav ul li {
+        display: flex;
+        justify-content: end;
+        padding: 3px 0;
+    }
+
+    header nav ul li a {
+        width: 100%;
+        max-width: 208px;
+        color: white;
+        background: none;
+        border: none;
+        border-top: 2px solid rgba(255, 255, 255, .2);
+        border-bottom: 2px solid rgba(255, 255, 255, .2);
+        text-align: center;
+        animation: none;
+    }
+
+    header nav ul li a:hover {
+        animation: none;
+    }
+}
+
+@media (max-width: 430px) {
+    h3 {
+        font-size: 4.3vw;
+    }
+}
+
+@media (max-width: 370px) {
+    h1 {
+        font-size: 8.66vw;
+    }
+
+    h2 {
+        font-size: 6.5vw;
+    }
+
+    p,
+    span,
+    a {
+        font-size: 4.3vw;
+    }
+}
+
+@media (max-width: 232px) {
+    header nav ul li a {
+        font-size: 6.4vw;
+    }
+}
