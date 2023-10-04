@@ -82,3 +82,9 @@
         font-size: 6.4vw;
     }
 }
+
+@media (max-aspect-ratio: 1/1) {
+    #profile-pic-fixed img {
+        width: 90vw;
+    }
+}
