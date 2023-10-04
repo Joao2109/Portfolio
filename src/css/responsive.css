@@ -86,5 +86,6 @@
 @media (max-aspect-ratio: 1/1) {
     #profile-pic-fixed img {
         width: 90vw;
+        height: 90vw;
     }
 }
