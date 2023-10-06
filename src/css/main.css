@@ -70,17 +70,19 @@ main {
     position: fixed;
     top: 0;
     left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: none;
     z-index: 2;
 }
 
 #profile-pic-fixed img{
-    width: 90vh;
+    width: 0;
     aspect-ratio: 1/1;
     border-top-left-radius: 25%;
     border-bottom-right-radius: 25%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
 }
 
 .content {
@@ -91,13 +93,7 @@ main {
     background-color: hsl(220, 40%, 30%);
     margin: 90px 0;
     padding: 5vh 0;
-    animation: content-m-l .3s 1;
     overflow: hidden;
-}
-
-.content:hover {
-    max-width: 1200px;
-    animation: content-m-h .3s 1;
 }
 
 .content h2 {
@@ -163,7 +159,7 @@ main {
 }
 
 .inside-content a:hover {
-    color: aqua;
+    color: #66efff;
     text-decoration: underline;
 }
 
@@ -188,15 +184,15 @@ main {
 }
 
 #about span {
-    color: aqua;
+    color: #66efff;
 }
 
 #about a {
-    color: aqua;
+    color: #66efff;
 }
 
 #about a:hover {
-    color: aqua;
+    color: #66efff;
     text-decoration: none;
 }
 
@@ -250,9 +246,10 @@ main {
     max-width: 48px;
     height: 30%;
     max-height: 48px;
+    cursor: pointer;
 }
 
-#contact svg {
+#footer svg {
     width: 100%;
     max-width: 48px;
     height: 100%;
