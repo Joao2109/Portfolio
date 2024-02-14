@@ -4,14 +4,14 @@
 }
 
 body {
-    background-color: hsl(220, 40%, 20%);
+    background-color: hsl(220, 50%, 20%);
 }
 
 header {
     width: 100%;
     height: 80px;
-    background-image: linear-gradient(hsl(215, 40%, 30%) 40%, rgba(0, 0, 0, 0.1));
-    border-bottom: 2px solid hsl(220, 40%, 30%);
+    background-image: linear-gradient(hsl(220, 50%, 30%) 60%, hsl(220, 50%, 20%));
+    border-bottom: 2px solid hsl(220, 50%, 30%);
 }
 
 header nav {
@@ -33,7 +33,7 @@ header nav ul li {
 }
 
 header nav ul li a {
-    color: hsl(205, 75%, 10%);
+    color: hsl(220, 50%, 10%);
     background-color: white;
     cursor: pointer;
     padding: 5px 10px;
@@ -85,12 +85,16 @@ main {
     transform: translateX(-50%) translateY(-50%);
 }
 
+.context {
+    display: flex;
+    flex-direction: column;
+}
+
 .content {
     width: 100%;
     max-width: 1000px;
-    height: 500px;
     color: white;
-    background-color: hsl(220, 40%, 30%);
+    background-color: hsl(220, 50%, 30%);
     margin: 90px 0;
     padding: 5vh 0;
     overflow: hidden;
@@ -102,7 +106,7 @@ main {
     padding: 30px 0;
     color: inherit;
     text-align: center;
-    border-bottom: 1px solid hsl(220, 40%, 50%);
+    border-bottom: 1px solid hsl(220, 50%, 50%);
 }
 
 .inside-content {
@@ -135,7 +139,13 @@ main {
     padding: 15px 0;
     color: inherit;
     text-align: center;
-    border-bottom: 1px solid hsl(220, 40%, 50%);
+    border-bottom: 1px solid hsl(220, 50%, 50%);
+}
+
+.inside-content div {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .inside-content p {
@@ -150,12 +160,6 @@ main {
 
 .inside-content p:nth-of-type(even) {
     text-align: right;
-}
-
-.inside-content a {
-    width: 100%;
-    color: inherit;
-    text-decoration: none;
 }
 
 .inside-content a:hover {
@@ -174,8 +178,8 @@ main {
 #about {
     height: auto;
     align-self: flex-start;
-    border-top-right-radius: 120px;
-    border-bottom-right-radius: 120px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
 }
 
 #about .inside-content {
@@ -198,34 +202,125 @@ main {
 
 #languages {
     align-self: flex-end;
-    border-top-left-radius: 120px;
-    border-bottom-left-radius: 120px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
 }
 
-#completed-projects {
-    align-self: flex-start;
-    border-top-right-radius: 120px;
-    border-bottom-right-radius: 120px;
-}
-
-#projects-in-progress {
-    align-self: flex-end;
-    border-top-left-radius: 120px;
-    border-bottom-left-radius: 120px;
-}
-
-#languages div {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-}
-
-#languages a {
+#languages p {
+    width: calc(100%/3);
+    margin: 5px 0;
     text-align: center;
 }
 
+#projects {
+    border-top: 2px solid hsl(220, 50%, 50%);
+    display: flex;
+}
+
+#first{
+    width: 70%;
+}
+
+#last {
+    width: 30%;
+}
+
+.projects {
+    width: 100%;
+    padding-top: 20px;
+}
+
+.projects h2 {
+    color: white;
+    text-align: center;
+}
+
+.projects div {
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 45px;
+    flex-wrap: wrap;
+}
+
+.completed-project {
+    width: 100%;
+    min-width: 200px;
+    max-width: 370px;
+    aspect-ratio: 1/1;
+    color: white;
+    background: hsl(220, 50%, 30%);
+    border-radius: 10%;
+    box-shadow: 0 0 20px 10px black;
+    text-decoration: none;
+}
+
+.completed-project div {
+    width: 100%;
+    aspect-ratio: 16/9;
+    padding: 0;
+    position: relative;
+}
+
+.completed-project img {
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.completed-project h3 {
+    width: 100%;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.completed-project p {
+    text-align: center;
+}
+
+.completed-project div {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.completed-project span {
+    margin-top: 5px;
+}
+
+#projects-in-progress {
+    padding: 15px 0;
+}
+
+#projects-in-progress li {
+    border-top: 1px solid hsl(220, 50%, 40%);
+    padding: 10px 0;
+    text-align: center;
+}
+
+#projects-in-progress li:first-of-type {
+    border-top: none;
+}
+
+#projects-in-progress li a {
+    color: rgb(0, 191, 223)
+}
+
+#projects-in-progress li a:hover {
+    color: rgb(0, 223, 255)
+}
+
 #footer {
-    border-top: 3px solid hsl(215, 40%, 30%);
+    border-top: 2px solid hsl(220, 50%, 50%);
 }
 
 #footer h1 {

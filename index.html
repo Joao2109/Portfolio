@@ -44,61 +44,69 @@
         </nav>
     </header>
     <main>
-        <section class="content" id="about">
-            <h2>Quem sou?</h2>
-            <section class="inside-content">
-                <img id="profile-pic" src="src/img/Profile-pic.jpeg" />
-                <p>Meu nome é <span>João Felipe</span>, Sou Desenvolvedor <span>Front-End</span>. Desenvolvedor
-                    <span>FullStack</span> em Formação. Você pode ver as linguagens que trabalho em <a href="">Linguagens.</a>
-                </p>
+        <section class="context">
+            <section class="content" id="about">
+                <h2>Quem sou?</h2>
+                <section class="inside-content">
+                    <img id="profile-pic" src="src/img/Profile-pic.jpeg" />
+                    <p>Meu nome é <span>João Felipe</span>, Sou Desenvolvedor <span>Front-End</span>. Desenvolvedor
+                        <span>FullStack</span> em Formação. Você pode ver as linguagens que trabalho em <a href="#languages">Linguagens.</a>
+                    </p>
+                </section>
+            </section>
+            <section class="content" id="languages">
+                <section class="inside-content">
+                    <h3>Tecnologias</h3>
+                    <div>
+                        <p>ReactJS</a>
+                        <p>JQuery</p>
+                        <p>Firebase</p>
+                        <p>NodeJS</p>
+                        <p>AnimeJS</p>
+                        <p>MongoDB</p>
+                    </div>
+                </section>
             </section>
         </section>
-        <section class="content" id="languages">
-            <section class="inside-content">
-                <h3>Linguagens</h3>
-                <div>
-                    <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank">HTML</a>
-                    <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS" target="_blank">Css</a>
-                    <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript" target="_blank">JavaScript</a>
-                </div>
-                <h3>Frameworks</h3>
-                <div>
-                    <a href="https://developer.mozilla.org/pt-BR/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started"
-                        target="_blank">ReactJS</a>
-                    <a href="https://jquery.com/" target="_blank">JQuery</a>
-                    <a href="https://nodejs.org/en/about" target="_blank">NodeJS</a>
-                </div>
+        <section id="projects">
+            <section id="first">
+                <section class="projects">
+                    <h2>Projetos concluídos</h2>
+                    <div>
+                        <a class="completed-project" href="https://joao2109.github.io/projeto-one-piece-dev-em-dobro/" target="_blank">
+                            <div>
+                                <img src="src/img/Projeto-One-Piece.png" alt="" />
+                                <div class="overlay"></div>
+                            </div>
+                            <h3>Projeto One Piece - Dev em Dobro</h3>
+                            <p>Tecnologias utilizadas:<div><span>JQuery</span></div></p>
+                        </a>
+                        <a class="completed-project" href="https://stf-team.web.app/" target="_blank">
+                            <div>
+                                <img src="src/img/STF-Team.png" alt="" />
+                                <div class="overlay"></div>
+                            </div>
+                            <h3>STF Team</h3>
+                            <p>Tecnologias utilizadas:<div><span>ReactJS</span><span>Firebase</span></div></p>
+                        </a>
+                    </div>
+                </section>
             </section>
-        </section>
-        <section class="content" id="completed-projects">
-            <h2>Projetos concluídos</h2>
-            <section class="inside-content">
-                <p><a href="https://joao2109.github.io/projeto-one-piece-dev-em-dobro/" target="_blank">Projeto One
-                        Piece - Dev em Dobro</a></p>
-                <p><a href="https://stf-team.web.app/" target="_blank">STF Team</a></p>
-            </section>
-        </section>
-        <section class="content" id="projects-in-progress">
-            <h2>Projetos em progresso</h2>
-            <section class="inside-content">
-                <p><a href="https://joao2109.github.io/Frontend-Mentor-profile-card-component/" target="_blank">Frontend
-                        Mentor profile card component</a></p>
-                <p><a href="https://joao2109.github.io/Frontend-Mentor-3-column-preview-card-component/"
-                        target="_blank">Frontend Mentor 3 column preview card component</a></p>
-                <p><a href="https://joao2109.github.io/Frontend-Mentor-stats-preview-card-component/"
-                        target="_blank">Frontend Mentor stats preview card component</a></p>
-                <p><a href="https://joao2109.github.io/Frontend-Mentor-product-preview-card-component/"
-                        target="_blank">Frontend Mentor product preview card component</a></p>
-                <p><a href="https://joao2109.github.io/Frontend-Monitor-interactive-rating-component/"
-                        target="_blank">Frontend Monitor interactive rating component</a></p>
-                <p><a href="https://joao2109.github.io/Frontend-Mentor-order-summary-component/"
-                        target="_blank">Frontend Mentor order summary component</a></p>
-                <p><a href="https://joao2109.github.io/Frontend-Mentor-nft-preview-card-component/"
-                        target="_blank">Frontend Mentor nft preview card component</a></p>
-                <p><a href="https://joao2109.github.io/Frontend-Mentor-results-summary-component/"
-                        target="_blank">Frontend Mentor results summary component</a></p>
-                <p><a href="https://joao2109.github.io/Frontend-Mentor-QR-code-component/" target="_blank">Frontend
-                        Mentor QR code component</a></p>
+            <section id="last">
+                <section class="projects">
+                    <h2>Projetos em progresso</h2>
+                    <ul id="projects-in-progress">
+                        <li><a class="project-in-progress" href="https://joao2109.github.io/Frontend-Mentor-profile-card-component/" target="_blank">Frontend Mentor profile card component</a></li>
+                        <li><a href="https://joao2109.github.io/Frontend-Mentor-3-column-preview-card-component/" target="_blank">Frontend Mentor 3 column preview card component</a></li>
+                        <li><a href="https://joao2109.github.io/Frontend-Mentor-stats-preview-card-component/" target="_blank">Frontend Mentor stats preview card component</a></li>
+                        <li><a href="https://joao2109.github.io/Frontend-Mentor-product-preview-card-component/" target="_blank">Frontend Mentor product preview card component</a></li>
+                        <li><a href="https://joao2109.github.io/Frontend-Monitor-interactive-rating-component/" target="_blank">Frontend Monitor interactive rating component</a></li>
+                        <li><a href="https://joao2109.github.io/Frontend-Mentor-order-summary-component/" target="_blank">Frontend Mentor order summary component</a></li>
+                        <li><a href="https://joao2109.github.io/Frontend-Mentor-nft-preview-card-component/" target="_blank">Frontend Mentor nft preview card component</a></li>
+                        <li><a href="https://joao2109.github.io/Frontend-Mentor-results-summary-component/" target="_blank">Frontend Mentor results summary component</a></li>
+                        <li><a href="https://joao2109.github.io/Frontend-Mentor-QR-code-component/" target="_blank">Frontend Mentor QR code component</a></li>
+                    </ul>
+                </section>
             </section>
         </section>
     </main>
