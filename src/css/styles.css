@@ -1,0 +1,395 @@
+:root {
+    overflow-y: auto;
+}
+
+body {
+    background-color: hsl(220, 50%, 20%);
+}
+
+header {
+    width: 100%;
+    height: 80px;
+    background-image: linear-gradient(hsl(220, 50%, 30%) 60%, hsl(220, 50%, 20%));
+    border-bottom: 2px solid hsl(220, 50%, 30%);
+}
+
+header nav {
+    height: 100%;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: end;
+    margin-top: 19px;
+    padding-left: 10%;
+    padding-right: 10%;
+    height: auto;
+}
+
+header nav ul li {
+
+    padding: 10px .6%;
+}
+
+header nav ul li a {
+    color: hsl(220, 50%, 10%);
+    background-color: white;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 20px;
+    border: 2px solid white;
+    font-size: 15px;
+    transition: .2s;
+}
+
+header nav ul li a:hover {
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#return {
+    position: fixed;
+    bottom: 5dvh;
+    right: 5dvw;
+    cursor: pointer;
+    z-index: 1;
+}
+
+#return svg {
+    transition: .2s;
+}
+
+#return svg:hover {
+    transform: scale(1.1);
+}
+
+#return svg circle,
+#return svg line {
+    fill: #66efff;
+    stroke: #66efff;
+}
+
+#return svg circle:first-of-type {
+    fill: hsl(220, 40%, 30%);
+}
+
+#profile-pic-fixed {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 2;
+}
+
+.show {
+    display: block !important;
+}
+
+#profile-pic-fixed img{
+    width: 90dvh;
+    height: 90dvh;
+    border-top-left-radius: 25%;
+    border-bottom-right-radius: 25%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.context {
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    width: 100%;
+    max-width: 1000px;
+    color: white;
+    background-color: hsl(220, 50%, 30%);
+    margin: 90px 0;
+    padding: 5vh 0;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.content:hover {
+    max-width: 1300px;
+}
+
+.content h2 {
+    width: 90%;
+    margin: 0 5%;
+    padding: 30px 0;
+    color: inherit;
+    text-align: center;
+    border-bottom: 1px solid hsl(220, 50%, 50%);
+}
+
+.inside-content {
+    width: 80%;
+    height: 80%;
+    margin: 0 10%;
+    padding: 2vh 0;
+    overflow: hidden;
+}
+
+.inside-content:hover {
+    overflow-y: auto;
+}
+
+#profile-pic {
+    width: 80%;
+    max-width: 200px;
+    aspect-ratio: 1/1;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.inside-content h3 {
+    width: 80%;
+    margin: 0 10%;
+    padding: 15px 0;
+    color: inherit;
+    text-align: center;
+    border-bottom: 1px solid hsl(220, 50%, 50%);
+}
+
+.inside-content div {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.inside-content p {
+    width: 720px;
+    margin: 10px 5%;
+    color: inherit;
+}
+
+.inside-content p:nth-of-type(odd) {
+    text-align: left;
+}
+
+.inside-content p:nth-of-type(even) {
+    text-align: right;
+}
+
+.inside-content a:hover {
+    color: #66efff;
+    text-decoration: underline;
+}
+
+.content a:nth-of-type(odd) {
+    text-align: left;
+}
+
+.content a:nth-of-type(even) {
+    text-align: right;
+}
+
+#about {
+    height: auto;
+    align-self: flex-start;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+#about .inside-content {
+    height: auto;
+    padding-bottom: 30px;
+}
+
+#about span {
+    color: #66efff;
+}
+
+#about a {
+    color: #66efff;
+}
+
+#about a:hover {
+    color: #66efff;
+    text-decoration: none;
+}
+
+#technology {
+    align-self: flex-end;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+
+#technology p {
+    width: calc(100%/3);
+    margin: 5px 0;
+    text-align: center;
+    cursor: context-menu;
+}
+
+#projects {
+    border-top: 2px solid hsl(220, 50%, 50%);
+    display: flex;
+}
+
+#first{
+    width: 70%;
+}
+
+#last {
+    width: 30%;
+}
+
+.projects {
+    width: 100%;
+    padding-top: 20px;
+}
+
+.projects h2 {
+    color: white;
+    text-align: center;
+}
+
+.projects div {
+    padding: 35px;
+    display: flex;
+    justify-content: center;
+    gap: 45px;
+    flex-wrap: wrap;
+}
+
+.completed-project {
+    width: 100%;
+    min-width: 200px;
+    max-width: 370px;
+    aspect-ratio: 1/1;
+    color: white;
+    background: hsl(220, 50%, 30%);
+    border-radius: 10%;
+    box-shadow: 0 0 20px 10px black;
+    text-decoration: none;
+    transition: .2s;
+}
+
+.completed-project:hover {
+    transform: scale(1.1);
+}
+
+.completed-project div {
+    width: 100%;
+    aspect-ratio: 16/9;
+    padding: 0;
+    position: relative;
+}
+
+.completed-project img {
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.completed-project h3 {
+    width: 100%;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.completed-project p {
+    text-align: center;
+}
+
+.completed-project div {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.completed-project span {
+    margin-top: 5px;
+}
+
+#projects-in-progress {
+    padding: 15px 0;
+}
+
+#projects-in-progress li {
+    border-top: 1px solid hsl(220, 50%, 40%);
+    padding: 10px 0;
+    text-align: center;
+    transition: .2s;
+}
+
+.projects-in-progress li:hover {
+    transform: scale(1.1);
+}
+
+#projects-in-progress li:first-of-type {
+    border-top: none;
+}
+
+#projects-in-progress li a {
+    color: rgb(0, 191, 223);
+    transition: .2s;
+}
+
+#projects-in-progress li a:hover {
+    color: rgb(0, 223, 255);
+}
+
+#footer {
+    border-top: 2px solid hsl(220, 50%, 50%);
+}
+
+#footer h1 {
+    margin-top: 30px;
+    color: white;
+    text-align: center;
+}
+
+#contact {
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+#contact a {
+    width: 30%;
+    max-width: 48px;
+    height: 30%;
+    max-height: 48px;
+    cursor: pointer;
+}
+
+#footer svg {
+    width: 100%;
+    max-width: 48px;
+    height: 100%;
+    max-height: 48px;
+    fill: #66efff;
+    transition: .4s;
+}
+
+#footer svg:hover {
+    fill: #ffffff;
+}
