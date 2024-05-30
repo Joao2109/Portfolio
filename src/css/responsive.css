@@ -23,27 +23,38 @@
 @media (max-width: 847px) {
     header {
         height: auto;
-    }
 
-    header nav ul {
-        flex-direction: column;
-        margin: 5px 0;
-    }
+        nav ul {
+            flex-direction: column;
+            align-items: end;
+            margin: 5px 0;
 
-    header nav ul li {
-        display: flex;
-        justify-content: end;
-        padding: 0;
-    }
+            li {
+                width: min(200px, 100%);
+                padding: 0;
+                border-top: 1px solid white;
 
-    header nav ul li a {
-        width: 100%;
-        max-width: 208px;
-        color: white;
-        background: linear-gradient(hsl(220, 50%, 40%), rgba(0, 0, 0, 0), hsl(220, 50%, 40%));
-        border: none;
-        border-radius: 0;
-        text-align: center;
+                a {
+                    width: 100%;
+                    max-width: 208px;
+                    color: white;
+                    background: none;
+                    border: none;
+                    border-radius: 0;
+                    display: block;
+                    text-align: center;
+                    text-decoration: none;
+                }
+
+                a:hover {
+                    transform: scale(1.2);
+                }
+            }
+
+            li:last-of-type {
+                border-bottom: 1px solid white;
+            }
+        }
     }
 }
 
