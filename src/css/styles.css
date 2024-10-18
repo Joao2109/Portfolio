@@ -10,6 +10,72 @@
   font-family: sans-serif;
 }
 
+.show {
+  display: flex !important;
+}
+
+.left {
+  align-self: flex-start;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+.right {
+  align-self: flex-end;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+
+#return {
+  width: 50px;
+  height: 50px;
+  background: light-dark(white, #043163);
+  border: 4px solid light-dark(#043163, #00bfff);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: min(5dvw, 20px);
+  right: min(5dvw, 20px);
+  outline: none;
+  z-index: 9999;
+}
+#return svg {
+  width: 80%;
+  height: 80%;
+  fill: light-dark(#043163, #00bfff);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: light-dark(#eeeeee, #010e1d);
+}
+
+::-webkit-scrollbar-thumb {
+  background: light-dark(#043163, #00bfff);
+}
+
+@media screen and (max-width: 620px) {
+  header nav ul {
+    flex-direction: column;
+    align-items: end !important;
+  }
+  header nav ul li {
+    width: 180px;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 420px) {
+  main #projects #completed h2,
+  main #projects #in-progress h2 {
+    font-size: 5dvw !important;
+  }
+}
 body {
   width: 100%;
   min-height: 100dvh;
@@ -30,13 +96,13 @@ body #profile-pic-fixed img {
 }
 body header {
   width: 100%;
-  height: 50px;
+  min-height: 50px;
   background: linear-gradient(light-dark(#1a4fba, #1d3e80) 60%, #032449);
   border-bottom: 2px solid light-dark(#043163, #1d3e80);
   padding: 10px;
 }
 body header nav ul {
-  height: 30px;
+  min-height: 30px;
   display: flex;
   gap: 10px;
   justify-content: right;
@@ -120,6 +186,7 @@ body main #projects #completed {
   width: 70%;
 }
 body main #projects #completed h2 {
+  font-size: 28px;
   text-align: center;
 }
 body main #projects #completed div {
@@ -165,7 +232,7 @@ body main #projects #completed div .completed .content div {
   gap: 10px;
 }
 body main #projects #completed div .completed:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   z-index: 1;
 }
 body main #projects #in-progress {
@@ -173,6 +240,7 @@ body main #projects #in-progress {
   list-style: none;
 }
 body main #projects #in-progress h2 {
+  font-size: 28px;
   text-align: center;
   margin-bottom: 10px;
 }
@@ -226,43 +294,6 @@ body footer #contact a svg {
 }
 body footer #contact a svg:hover {
   fill: light-dark(#1d3e80, #00bfff);
-}
-
-.show {
-  display: flex !important;
-}
-
-.left {
-  align-self: flex-start;
-  border-top-right-radius: 50px;
-  border-bottom-right-radius: 50px;
-}
-
-.right {
-  align-self: flex-end;
-  border-top-left-radius: 50px;
-  border-bottom-left-radius: 50px;
-}
-
-#return {
-  width: 50px;
-  height: 50px;
-  background: light-dark(white, #043163);
-  border: 4px solid light-dark(#043163, #00bfff);
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  bottom: min(5dvw, 20px);
-  right: min(5dvw, 20px);
-  outline: none;
-  z-index: 9999;
-}
-#return svg {
-  width: 80%;
-  height: 80%;
-  fill: light-dark(#043163, #00bfff);
 }
 
 /*# sourceMappingURL=styles.css.map */

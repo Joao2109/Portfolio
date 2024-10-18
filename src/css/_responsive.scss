@@ -1,0 +1,33 @@
+@media screen and (max-width: 620px) {
+    header {
+        
+        nav {
+
+            ul {
+                flex-direction: column;
+                align-items: end !important;
+
+                li {
+                    width: 180px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 420px) {
+    main {
+
+        #projects {
+
+            #completed,
+            #in-progress {
+
+                h2 {
+                    font-size: 5dvw !important;
+                }
+            }
+        }
+    }
+}
